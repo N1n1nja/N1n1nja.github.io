@@ -9,18 +9,18 @@
   
   <title>ArrayList与LinkedList | Ninja&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ##ArrayList ###ArrayList查询快，增删慢的原因    由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元">
+  <meta name="description" content="二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ArrayListArrayList查询快，增删慢的原因由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArrayList与LinkedList">
 <meta property="og:url" content="http://yoursite.com/2018/08/25/ArrayList与LinkedList/index.html">
 <meta property="og:site_name" content="Ninja&#39;s blog">
-<meta property="og:description" content="##二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ##ArrayList ###ArrayList查询快，增删慢的原因    由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元">
+<meta property="og:description" content="二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ArrayListArrayList查询快，增删慢的原因由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-25T06:53:14.901Z">
+<meta property="og:updated_time" content="2018-08-25T06:55:59.014Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArrayList与LinkedList">
-<meta name="twitter:description" content="##二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ##ArrayList ###ArrayList查询快，增删慢的原因    由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元">
+<meta name="twitter:description" content="二者的关系–|Collection—-|List——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。——|LinkedList 底层采用链表实现，增删快，查询慢。 ArrayListArrayList查询快，增删慢的原因由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以">
   
     <link rel="alternative" href="/atom.xml" title="Ninja&#39;s blog" type="application/atom+xml">
   
@@ -313,14 +313,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##二者的关系<br>–|Collection<br>—-|List<br>——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。<br>——|LinkedList 底层采用链表实现，增删快，查询慢。</p>
-<p>##ArrayList</p>
-<p>###ArrayList查询快，增删慢的原因<br>    由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以直接按索引查找, 所以查找时较快<br>    可以考虑,假设向数组的0角标未知添加元素,那么原来的角标位置的元素需要整体往后移,并且数组可能还要增容,一旦增容,就需要要将老数组的内容拷贝到新数组中.所以数组的增删的效率是很低的。</p>
-<p>###ArrayList的特点<br>    ArrayList底层维护了一个Object[] 用于存储对象，默认数组的长度是10。可以通过 new ArrayList(20)显式的指定用于存储对象的数组的长度。<br>    当默认的或者指定的容量不够存储对象的时候，容量自动增长为原来的容量的1.5倍。</p>
-<p>注：在实际的开发中，ArrayList是使用频率最高的一个集合</p>
-<p>##LinkedList</p>
-<p>###LinkedList增删快，查询慢的原因<br>    由于LinkedList在内存中的地址不连续，需要让上一个元素记住下一个元素。所以每个元素中保存的有下一个元素</p>
-
+        <h2 id="二者的关系"><a href="#二者的关系" class="headerlink" title="二者的关系"></a>二者的关系</h2><p>–|Collection<br>—-|List<br>——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。<br>——|LinkedList 底层采用链表实现，增删快，查询慢。</p>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><h3 id="ArrayList查询快，增删慢的原因"><a href="#ArrayList查询快，增删慢的原因" class="headerlink" title="ArrayList查询快，增删慢的原因"></a>ArrayList查询快，增删慢的原因</h3><pre><code>由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以直接按索引查找, 所以查找时较快
+可以考虑,假设向数组的0角标未知添加元素,那么原来的角标位置的元素需要整体往后移,并且数组可能还要增容,一旦增容,就需要要将老数组的内容拷贝到新数组中.所以数组的增删的效率是很低的。
+</code></pre><h3 id="ArrayList的特点"><a href="#ArrayList的特点" class="headerlink" title="ArrayList的特点"></a>ArrayList的特点</h3><pre><code>ArrayList底层维护了一个Object[] 用于存储对象，默认数组的长度是10。可以通过 new ArrayList(20)显式的指定用于存储对象的数组的长度。
+当默认的或者指定的容量不够存储对象的时候，容量自动增长为原来的容量的1.5倍。
+</code></pre><p>注：在实际的开发中，ArrayList是使用频率最高的一个集合</p>
+<h2 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h2><h3 id="LinkedList增删快，查询慢的原因"><a href="#LinkedList增删快，查询慢的原因" class="headerlink" title="LinkedList增删快，查询慢的原因"></a>LinkedList增删快，查询慢的原因</h3><pre><code>由于LinkedList在内存中的地址不连续，需要让上一个元素记住下一个元素。所以每个元素中保存的有下一个元素
+</code></pre>
       
     </div>
     
@@ -331,7 +331,7 @@
         <p><span>本文标题:</span><a  href="/2018/08/25/ArrayList与LinkedList/">ArrayList与LinkedList</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 Ninja 的个人博客">Ninja</a></p>
         <p><span>发布时间:</span>2018年08月25日 - 14时51分</p>
-        <p><span>最后更新:</span>2018年08月25日 - 14时53分</p>
+        <p><span>最后更新:</span>2018年08月25日 - 14时55分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/08/25/ArrayList与LinkedList/" title="ArrayList与LinkedList">http://yoursite.com/2018/08/25/ArrayList与LinkedList/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/25/ArrayList与LinkedList/　　作者: Ninja" title=""></span>
@@ -359,7 +359,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#二者的关系"><span class="toc-number">1.</span> <span class="toc-text">二者的关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList"><span class="toc-number">2.</span> <span class="toc-text">ArrayList</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList查询快，增删慢的原因"><span class="toc-number">2.1.</span> <span class="toc-text">ArrayList查询快，增删慢的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ArrayList的特点"><span class="toc-number">2.2.</span> <span class="toc-text">ArrayList的特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LinkedList"><span class="toc-number">3.</span> <span class="toc-text">LinkedList</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LinkedList增删快，查询慢的原因"><span class="toc-number">3.1.</span> <span class="toc-text">LinkedList增删快，查询慢的原因</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
