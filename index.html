@@ -298,7 +298,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="二者的关系"><a href="#二者的关系" class="headerlink" title="二者的关系"></a>二者的关系</h2><p>–|Collection<br>—-|List<br>——|ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。<br>——|LinkedList 底层采用链表实现，增删快，查询慢。</p>
+        <h2 id="二者的关系"><a href="#二者的关系" class="headerlink" title="二者的关系"></a>二者的关系</h2><p>–| Collection<br>—-| List<br>——| ArrayList 底层采用数组实现，默认10。每次增长60%，((oldCapacity*3)/2+1)查询快，增删慢。<br>——| LinkedList 底层采用链表实现，增删快，查询慢。</p>
 <h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><h3 id="ArrayList查询快，增删慢的原因"><a href="#ArrayList查询快，增删慢的原因" class="headerlink" title="ArrayList查询快，增删慢的原因"></a>ArrayList查询快，增删慢的原因</h3><pre><code>由于ArrayList是数组实现, 在增和删的时候会牵扯到数组增容, 以及拷贝元素. 所以慢。数组是可以直接按索引查找, 所以查找时较快
 可以考虑,假设向数组的0角标未知添加元素,那么原来的角标位置的元素需要整体往后移,并且数组可能还要增容,一旦增容,就需要要将老数组的内容拷贝到新数组中.所以数组的增删的效率是很低的。
 </code></pre><h3 id="ArrayList的特点"><a href="#ArrayList的特点" class="headerlink" title="ArrayList的特点"></a>ArrayList的特点</h3><pre><code>ArrayList底层维护了一个Object[] 用于存储对象，默认数组的长度是10。可以通过 new ArrayList(20)显式的指定用于存储对象的数组的长度。
